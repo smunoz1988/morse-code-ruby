@@ -8,4 +8,10 @@ morse_characters = {
   '6' => '-....', '7' => '--...', '8' => '---..', '9' => '----.', '0' => '-----'
 }
 
+def decode_char(letter, array)
+  array.map do |key, val|
+    return key.upcase if val == letter
+  end
+end
 
+puts decode_char('.-', morse_characters)
