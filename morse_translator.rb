@@ -15,3 +15,11 @@ def decode_char(letter, array)
 end
 
 puts decode_char('.-', morse_characters)
+
+def decode_word(word, array)
+  word.split(' ').map do |letter|
+    decode_char(letter, array)
+  end.join
+end
+
+puts decode_word('-- -.--', morse_characters)
