@@ -23,3 +23,11 @@ def decode_word(word, array)
 end
 
 puts decode_word('-- -.--', morse_characters)
+
+def decode(message, morse_characters)
+  message.split('   ').map do |word|
+    decode_word(word, morse_characters)
+  end.join(' ')
+end
+
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...', morse_characters)
