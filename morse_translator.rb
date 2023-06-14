@@ -17,7 +17,7 @@ end
 puts decode_char('.-', morse_characters)
 
 def decode_word(word, array)
-  word.split(' ').map do |letter|
+  word.split.map do |letter|
     decode_char(letter, array)
   end.join
 end
